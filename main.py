@@ -9,9 +9,9 @@ from bns import router as bonus_router
 from donat import router as donat_router
 from transfer import router as transfer_router
 from gamg import router as gamg_router
+import help
 
-
-BOT_TOKEN = "8535768087:AAF9D6Sm4hVIYGgaGLA9h8qGvrfSFI5hrmk"
+BOT_TOKEN = "8203910368:AAH4BSgNWJMpqLw3ZE7lieVwej1rzOjNrGA"
 
 async def main():
     bot = Bot(token=BOT_TOKEN)
@@ -28,6 +28,7 @@ async def main():
     dp.include_router(donat_router)
     dp.include_router(transfer_router)
     dp.include_router(gamg_router)
+    dp.include_router(help.router)
     dp.include_router(main_router)  # Пользовательский - вторым
 
     print("Бот запущен!")
