@@ -11,7 +11,7 @@ from transfer import router as transfer_router
 from gamg import router as gamg_router
 import help
 
-BOT_TOKEN = "8203910368:AAH4BSgNWJMpqLw3ZE7lieVwej1rzOjNrGA"
+BOT_TOKEN = "8535768087:AAF9D6Sm4hVIYGgaGLA9h8qGvrfSFI5hrmk"
 
 async def main():
     bot = Bot(token=BOT_TOKEN)
@@ -40,3 +40,4 @@ if __name__ == "__main__":
         asyncio.run(main())
     except KeyboardInterrupt:
         print("Бот остановлен.")
+
