@@ -7,9 +7,9 @@ router = Router()
 
 # Цены и награды (переведено в cron)
 OFFERS = {
-    "donat_25": {"stars": 1, "cron": 50000, "label": "⭐️ 25 Stars — 50 000 cron"},
-    "donat_50": {"stars": 1, "cron": 104000, "label": "⭐️ 50 Stars — 104 000 cron"},
-    "donat_100": {"stars": 1, "cron": 208000, "label": "⭐️ 100 Stars — 208 000 cron"},
+    "donat_25": {"stars": 25, "cron": 50000, "label": "⭐️ 25 Stars — 50 000 cron"},
+    "donat_50": {"stars": 50, "cron": 104000, "label": "⭐️ 50 Stars — 104 000 cron"},
+    "donat_100": {"stars": 100, "cron": 208000, "label": "⭐️ 100 Stars — 208 000 cron"},
 }
 
 @router.message(F.text.lower().in_(["донат", "/donate"]))
@@ -84,4 +84,5 @@ async def on_successful_payment(message: Message):
             f"Вам начислено <b>{cron_to_add:,}</b> cron.\n"
             f"Спасибо за поддержку проекта!",
             parse_mode="HTML"
+
         )
